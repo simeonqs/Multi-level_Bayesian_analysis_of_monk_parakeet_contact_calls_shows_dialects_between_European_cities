@@ -1,0 +1,1 @@
+This folder is based on the original social networks folder for the voice paper. Model 1 starts from the model 8 in that folder. 

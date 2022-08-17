@@ -1,0 +1,22 @@
+*.Rproj.user
+*.Rhistory
+*.Ruserdata
+*.Rproj
+*.DS_Store
+*Icon?
+ANALYSIS/RESULTS/spcc/contact clips
+ANALYSIS/RESULTS/spcc/models
+ANALYSIS/RESULTS/luscinia/dtw/dtw_results.RData.
+ANALYSIS/RESULTS/luscinia/dtw/models
+ANALYSIS/RESULTS/luscinia/dtw/umap_results.RData
+ANALYSIS/RESULTS/luscinia/dtw/dtw_results.RData
+ANALYSIS/RESULTS/luscinia/dtw/pca_results.RData
+ANALYSIS/RESULTS/luscinia/dtw/pco_results.RData
+ANALYSIS/RESULTS/luscinia/trace measurements/model results
+ANALYSIS/RESULTS/spcc/umap_results.RData
+ANALYSIS/RESULTS/spcc/dtw_results.RData
+ANALYSIS/RESULTS/spcc/pca_results.RData
+ANALYSIS/RESULTS/spcc/pco_results.RData
+ANALYSIS/RESULTS/social networks model/sim_model.RDataANALYSIS/RESULTS/social networks model/sim_dat.RData
+Rproj.user
+.Rproj.user
