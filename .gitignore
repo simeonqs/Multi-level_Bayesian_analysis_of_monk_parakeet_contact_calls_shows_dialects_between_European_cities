@@ -4,6 +4,8 @@
 *.Rproj
 *.DS_Store
 *Icon?
+ANALYSIS/DATA/trade CITES
+ANALYSIS/DATA/18_11_traces_luscinia.csv
 ANALYSIS/RESULTS/spcc/contact clips
 ANALYSIS/RESULTS/spcc/models
 ANALYSIS/RESULTS/luscinia/dtw/dtw_results.RData.
@@ -18,5 +20,7 @@ ANALYSIS/RESULTS/spcc/dtw_results.RData
 ANALYSIS/RESULTS/spcc/pca_results.RData
 ANALYSIS/RESULTS/spcc/pco_results.RData
 ANALYSIS/RESULTS/social networks model/sim_model.RDataANALYSIS/RESULTS/social networks model/sim_dat.RData
+ANALYSIS/RESULTS/traces on spectrogram/results.pdf
+ANALYSIS/RESULTS/sorting spectrograms
 Rproj.user
 .Rproj.user
