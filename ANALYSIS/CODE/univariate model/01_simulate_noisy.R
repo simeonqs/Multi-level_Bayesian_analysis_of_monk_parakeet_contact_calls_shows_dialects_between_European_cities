@@ -22,7 +22,7 @@ rm(list = ls())
 path_functions = 'ANALYSIS/CODE/functions'
 path_out = 'ANALYSIS/RESULTS/univariate model/'
 path_base_data = 'ANALYSIS/RESULTS'
-path_model = 'ANALYSIS/CODE/univariate model/m_5.stan'
+path_model = 'ANALYSIS/CODE/univariate model/m_4.stan'
 
 # Load base data
 base_files = list.files(path_base_data, 'base_data*', full.names = T)
