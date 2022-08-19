@@ -1,7 +1,7 @@
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Project: chapter II
 # Date started: 04-08-2021
-# Date last modified: 06-08-2021
+# Date last modified: 18-08-2022
 # Author: Simeon Q. Smeele
 # Description: Plots the city differences.  
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -12,11 +12,11 @@ plot.city.diff = function(file,
   
   # Extract post
   load(file)
-  post = extract.samples(model)
-  
+
   # Calculate differences
-  diff_cities = lapply(2:ncol(post$z_city), function(i) 
-    sapply(1:nrow(post$z_city), function(j) post$z_city[j,i] - post$z_city[j,1]))
+  diff_cities = lapply(2:length(unique(base_data$cities)), function(i) 
+    sapply(1:length(post$sigma_obs), function(j) post[[sprintf('z_city[%s]', i)]][j] - 
+             post[[sprintf('z_city[%s]', 1)]][j]))
   
   # Plot
   if(real) main = 'relative to Athens'
