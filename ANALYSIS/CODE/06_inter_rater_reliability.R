@@ -19,8 +19,9 @@ library(irr)
 path_base = '/home/styndel/ownCloud/monk_parakeet_dialect/ANALYSIS'
 
 path_functions = 'ANALYSIS/CODE/functions'
-random_dat = sprintf('%s/RESULTS/sorting spectrograms/observer reliability/random_data_2022_02_23_14_34_40.RData', path_base)
-base_data = '/home/styndel/Dropbox/PhD/Project/monk_parakeet_dialect_repo/monk_parakeet_dialect/ANALYSIS/RESULTS/base_data_2021_11_18_20_16_49.RData'
+random_dat = 'ANALYSIS/RESULTS/sorting spectrograms/observer reliability/random_data_2022_02_23_14_34_40.RData'
+base_data = 'ANALYSIS/RESULTS/base_data_2022_08_17_10_00_03.RData'
+
 load(random_dat)
 load(base_data)
 
@@ -53,7 +54,7 @@ simeon_df$index_match <- seq(1,1000)
 simeon_df <- simeon_df %>% arrange(index_match)
 ###Step 3 read in Nina's file 
 
-nina_df <- data.frame(list.files(path = "~/ownCloud/monk_parakeet_dialect/ANALYSIS/RESULTS/sorting spectrograms/observer reliability/master files 2022_02_23_14_34_40_NS",pattern = ".pdf",recursive = T))
+nina_df <- data.frame(list.files(path = "/ANALYSIS/RESULTS/sorting spectrograms/observer reliability/master files 2022_02_23_14_34_40_NS",pattern = ".pdf",recursive = T))
 nina_df <- nina_df %>% dplyr::rename("data"="list.files.path......ownCloud.monk_parakeet_dialect.ANALYSIS.RESULTS.sorting.spectrograms.observer.reliability.master.files.2022_02_23_14_34_40_NS...")
 nina_df <- as.data.frame(str_split_fixed(nina_df$data, "/", 2))
 nina_df$V2 <- gsub("\\..*","",nina_df$V2)
