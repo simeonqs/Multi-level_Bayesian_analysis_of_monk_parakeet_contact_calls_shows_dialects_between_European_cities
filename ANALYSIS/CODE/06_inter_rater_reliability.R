@@ -9,8 +9,8 @@
 
 library(irr)
 ###Step 1 read in files
-master_observer_results <- read.csv("RESULTS/sorting spectrograms/master_observer_results.csv")
-irr_observer_results <- read.csv("RESULTS/sorting spectrograms/irr_observer_results.csv")
+master_observer_results <- read.csv("ANALYSIS/RESULTS/sorting spectrograms/master_observer_results.csv")
+irr_observer_results <- read.csv("ANALYSIS/RESULTS/sorting spectrograms/irr_observer_results.csv")
 
 #interrater reliability 
 #all contact calls (binned into other vs contact)
