@@ -44,7 +44,7 @@ To reproduce the results, scripts have to be run in the following order:
 4 . Then run the code in the `spcc` to reproduce the results of spectrographic cross correlation (see supplemental materials):
 
 	- Run `00_create_spec_objects.R` to create the spec objects (modified spectrograms). **NOTE**: This script requires the raw audio data which is not available. This creates `spec_objects - contact 2019.RData` with the spec objects. 
-	
+		
 	- Run `01_run_spcc.R` to run the actual spectrorgraphic cross correlation. **NOTE**: This step takes a lot of computing power and is best done on a HPC. This script runs on 40 threads. This setting can be adjusted. Windows users can only run on a single thread. This creates `o - contact 2019.RData` with all the distances in a vector. 
 	
 	- Run `02_prepare_data.R` to prepare the results for the model. This creates the RData objects with the results of PCO, PCA and UMAP.
