@@ -51,8 +51,6 @@ To reproduce the results, scripts have to be run in the following order:
 	
 	- Run `03_run_models.R` to run the Bayesian multilevel models. This creates the model results for two dimensions from PCO, PCA and UMAP.
 	
-		- test
-	
 5. To plot the final figures run `02_plot_final_figures.R`. 
 
 6. To create the table with sample effort run `03_create_table_effort.R`. 
