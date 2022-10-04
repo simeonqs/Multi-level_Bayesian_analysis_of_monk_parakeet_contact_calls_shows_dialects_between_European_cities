@@ -67,6 +67,9 @@ To reproduce the results, scripts have to be run in the following order:
 	
 	- Run `03_plot_results.R` to plot the results of the sensitivity analysis. 
 
+10. To reproduce the inter-rate reliability analysis run `06_inter_rater_reliability.R` script in the CODE folder. All 1000 files for the sorting were randomly selected. 
+
+
 ------------------------------------------------
 
 # Requirements
