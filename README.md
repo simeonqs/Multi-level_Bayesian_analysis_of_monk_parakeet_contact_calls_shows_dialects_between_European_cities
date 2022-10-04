@@ -71,12 +71,38 @@ To reproduce the results, scripts have to be run in the following order:
 
 # Requirements
 
+To run the Bayesian models *Stan* needs to be installed. This is not an R package, but *Stan* can be run from R. For installation see: https://mc-stan.org/users/interfaces/. 
+
+The R code requires three libraries: *cmdstanr* to run the Stan engine, *scales* for transparent colours and *knitr* for the compilation of the pdf. All three can be installed from CRAN. To finish installing *cmdstanr* see: https://mc-stan.org/cmdstanr/. 
+
+All other packages will be automatically installed when running the R scripts. 
+
 
 ------------------------------------------------
 
 # Meta data
 
-
+- .gitignore
+	- the invisible file telling git which files should not be synced (large or useless files)
+- README
+	- the file you are reading now, everything that you need to know, or at least as much as we remembered to document
+	
+- ANALYSIS/CODE
+	- the folder with all scripts needed to reproduce the results, note that each script has a description in the header, for details see also "Reproducing results" in the README, see below for the files not explicitly described in that section
+	
+- ANALYSIS/CODE/functions
+	- the folder with all home-made functions needed, these are automatically loaded by the scripts that require them
+	
+- ANALYSIS/CODE/markdowns/bibliography.bib
+	- the bib files that contains all references for the markdowns
+- ANALYSIS/CODE/markdowns/sensitivity analysis.Rmd
+	- the Rmarkdown file needed to reproduce the sensitivity analysis, description of steps within
+- ANALYSIS/CODE/markdowns/sensitivity-analysis.pdf
+	- the pdf with the compiled results of the sensitivity analysis
+- ANALYSIS/CODE/markdowns/supplemental results.Rmd
+	- the markdown file needed to reproduced the supplemental results, description of steps within
+- ANALYSIS/CODE/markdowns/supplemental-results.pdf
+	- the pdf with the compiled supplemental results
 
 ------------------------------------------------
 
@@ -87,8 +113,6 @@ R version 4.1.0 (2021-05-18)
 Platform: x86_64-apple-darwin17.0 (64-bit)
 
 Running under: macOS Catalina 10.15.7
-
-Packages: 
 
 ------------------------------------------------
 
