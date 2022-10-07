@@ -106,6 +106,86 @@ All other packages will be automatically installed when running the R scripts.
 	- the markdown file needed to reproduced the supplemental results, description of steps within
 - ANALYSIS/CODE/markdowns/supplemental-results.pdf
 	- the pdf with the compiled supplemental results
+	
+- ANALYSIS/CODE/univariate model/00_simulate_clean.R
+	- R script to simulate dialect data for sensitivity analysis
+- ANALYSIS/CODE/univariate model/01_simulate_noisy.R
+	- R script to simulate noisy dialect data for sensitivity analysis
+- ANALYSIS/CODE/univariate model/03_plot_results.R
+	- R script to plot the output
+- ANALYSIS/CODE/univariate model/m_4.stan
+	- Stan script with the multilevel model, description within
+	
+- ANALYSIS/DATA/overview parks/overview parks SAT.csv
+	- data on parks collected by SAT
+	- park_name: name of park
+	- park_shorthand: which shorthand was used to make nest names
+	- city: city
+	- notes: whatever
+	- nr_xxx: how many recording I have in each situation, not so important anymore
+	- grass_present: if there is a patch of grass, yes = 1, no = 0
+	- park_type: general description
+	- palms: present = 1, not = 0
+	- pine: same for pines
+	- decidious: same for deciduous (just me spelling it wrong)
+	- fruit_decidious: if there are fruit bearing deciduous trees
+	- fruit_palms: if there are fruit bearing palms
+- ANALYSIS/DATA/overview parks/overview parks SQS.csv
+	- data on parks collected by SQS
+	- for meta data see above
+- ANALYSIS/DATA/overview parks/README.txt
+	- meta data for files
+- ANALYSIS/DATA/overview recordings/overview recordings SAT.csv
+	- meta data per recording collected by SAT
+	- video_file_name: the name of the file
+	- selected: whether or not I have done the selection table in Raven
+	- situation: general what the recording is about
+	- nr_individuals: nr of individual present if I have said that in the recording
+	- park: which park
+	- city: which city
+	- notes: whatever you want
+	- UTM: UTM separated by a space
+	- nest: if recorded from one nest the nest code, if multiple all separated by /
+	- gain: gain
+	- video: if I have used video to annotate
+- ANALYSIS/DATA/overview recordings/overview recordings SQS.csv
+	- meta data per recording collected by SQS
+	- for meta data see above
+- ANALYSIS/DATA/overview recordings/README.txt
+	- meta data for files
+- ANALYSIS/DATA/selection tables
+	- folder with all selection tables from Raven Lite
+	- file names is the file name of the audio file concatenated with `.Table.1.selections.txt`
+	- Selection: index of selection
+	- View: where the selection was made (this is always duplicated across waveform and spectrogram)
+	- Channel: not relevant
+	- Begin Time (s): the begin time of the selection in seconds
+	- End Time (s): the end time of the selection in seconds
+	- Low Freq (Hz): not relevant
+	- High Freq (Hz): not relevant
+	- Annotation: three bit of information if available: ID_behaviour_NumberOfIndividuals, ID: if the calling individual could be identified this is a unique ID (but as individuals were not marked, individuals can have multiple ID's across recordings), behaviour: the behaviour of the focal individual during or right before vocalising, NumberOfIndividuals: how many individuals were around during vocalisation
+- ANALYSIS/DATA/18_11_traces_luscinia.csv
+	- csv file with the traces from Luscinia, the meta data is a bit confusing because of the naming conventions
+	- Indivdiual
+- ANALYSIS/DATA/Bad_Files_17_11.xlsx
+	- excel file with the names for the traces that were not good enough to be analysed
+	- Bad Files: the Luscinia file names (Individual) for the bad traces
+	- Comment: info on what was bad or potentially still usefull
+	- Remove: not used, all files were removed
+- ANALYSIS/DATA/Bad_Files_version_old_before_adjusted.xlsx
+	- excel file with some names of poor traces that were also removed from the Luscinia database (only used to make sure we were not forgetting some traces
+	- meta data not relevant
+	
+- ANALYSIS/RESULTS/figures/compositeXXX
+	- pdfs for all composite figures for the combination of a method and a dimension reduction analysed with the Bayesian multilevel model
+- ANALYSIS/RESULTS/figures/fig_pco_paper.pdf
+	- pdf for the main composite figure
+- ANALYSIS/RESULTS/figures/sensitivity analysis figure.pdf
+	- pdf for the simulated data, can be compared to the composite figures to see how incorrect pooling can create spurious results
+- ANALYSIS/RESULTS/figures/sigmasXXX
+	- pdfs for the sigma parameters, can be compared to the sensitivity analysis
+- ANALYSIS/RESULTS/figures/figures_log.txt
+	- txt file with log to keep track of which base data was used to generate the figures
 
 ------------------------------------------------
 
