@@ -69,7 +69,6 @@ To reproduce the results, scripts have to be run in the following order:
 
 10. To reproduce the inter-rate reliability analysis run `06_inter_rater_reliability.R` script in the CODE folder. All 1000 files for the sorting were randomly selected. 
 
-
 ------------------------------------------------
 
 # Requirements
@@ -79,7 +78,6 @@ To run the Bayesian models *Stan* needs to be installed. This is not an R packag
 The R code requires three libraries: *cmdstanr* to run the Stan engine, *scales* for transparent colours and *knitr* for the compilation of the pdf. All three can be installed from CRAN. To finish installing *cmdstanr* see: https://mc-stan.org/cmdstanr/. 
 
 All other packages will be automatically installed when running the R scripts. 
-
 
 ------------------------------------------------
 
@@ -166,14 +164,13 @@ All other packages will be automatically installed when running the R scripts.
 	- Annotation: three bit of information if available: ID_behaviour_NumberOfIndividuals, ID: if the calling individual could be identified this is a unique ID (but as individuals were not marked, individuals can have multiple ID's across recordings), behaviour: the behaviour of the focal individual during or right before vocalising, NumberOfIndividuals: how many individuals were around during vocalisation
 - ANALYSIS/DATA/18_11_traces_luscinia.csv
 	- csv file with the traces from Luscinia, the following column headers are output:
-	- Individual: Individual ID name
-	- Song: Specific recording track name
-	- Syllable: Not needed for this analysis
-	- Phrase: Not needed for this analysis
-	- Element: Not needed for this analysis
+	- Individual: individual ID name
+	- Song: specific recording track name
+	- Syllable: not needed for this analysis
+	- Phrase: not needed for this analysis
+	- Element: not needed for this analysis
 	- Time: Time step of fundamental frequency
-	- Fundamental Frequency: Point of fundamental frequency 
-	
+	- Fundamental Frequency: point of fundamental frequency 
 - ANALYSIS/DATA/Bad_Files_17_11.xlsx
 	- excel file with the names for the traces that were not good enough to be analysed
 	- Bad Files: the Luscinia file names (Individual) for the bad traces
