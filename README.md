@@ -165,8 +165,15 @@ All other packages will be automatically installed when running the R scripts.
 	- High Freq (Hz): not relevant
 	- Annotation: three bit of information if available: ID_behaviour_NumberOfIndividuals, ID: if the calling individual could be identified this is a unique ID (but as individuals were not marked, individuals can have multiple ID's across recordings), behaviour: the behaviour of the focal individual during or right before vocalising, NumberOfIndividuals: how many individuals were around during vocalisation
 - ANALYSIS/DATA/18_11_traces_luscinia.csv
-	- csv file with the traces from Luscinia, the meta data is a bit confusing because of the naming conventions
-	- Indivdiual
+	- csv file with the traces from Luscinia, the following column headers are output:
+	- Individual: Individual ID name
+	- Song: Specific recording track name
+	- Syllable: Not needed for this analysis
+	- Phrase: Not needed for this analysis
+	- Element: Not needed for this analysis
+	- Time: Time step of fundamental frequency
+	- Fundamental Frequency: Point of fundamental frequency 
+	
 - ANALYSIS/DATA/Bad_Files_17_11.xlsx
 	- excel file with the names for the traces that were not good enough to be analysed
 	- Bad Files: the Luscinia file names (Individual) for the bad traces
