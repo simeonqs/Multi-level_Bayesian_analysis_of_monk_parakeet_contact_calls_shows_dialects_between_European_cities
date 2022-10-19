@@ -3,7 +3,7 @@
 This repo is associated with the following article: 
 
 ```
-Reference
+Smeele, S. Q.*, Tyndel, S. A.*, Aplin, L. A. & McElreath, M. B. (2022). Multi-level analysis of monk parakeet vocalisations shows emergent dialects between cities in the European invasive range. BioRxiv. https://doi.org/10.1101/2022.10.12.511863 [* co-first author]
 ```
 ------------------------------------------------
 
@@ -114,6 +114,13 @@ All other packages will be automatically installed when running the R scripts.
 - ANALYSIS/CODE/univariate model/m_4.stan
 	- Stan script with the multilevel model, description within
 	
+- ANALYSIS/DATA/all_audio
+	- folder containing all raw recordings
+	- for each day there is a translation file that records the original file name and the new file name (as in this folder); the new filename consists of the date and time the recording was stored on the recorder (when the recording was finished)
+	- **NOTE**: this file is not available on GitHub, but can be downloaded from Edmond
+-  ANALYSIS/DATA/luscinia database
+	- folder containing the Luscina data base file, can be used to view all the traces in Luscinia (is not required to reproduce the results since all traces are also stored in a csv - see below)
+	- **NOTE**: this file is not available on GitHub, but can be downloaded from Edmond
 - ANALYSIS/DATA/overview parks/overview parks SAT.csv
 	- data on parks collected by SAT
 	- park_name: name of park
