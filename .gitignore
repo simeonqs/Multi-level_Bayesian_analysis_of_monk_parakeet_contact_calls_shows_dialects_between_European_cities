@@ -6,6 +6,8 @@
 *Icon?
 ANALYSIS/DATA/trade CITES
 ANALYSIS/DATA/18_11_traces_luscinia.csv
+ANALYSIS/DATA/all_audio
+ANALYSIS/DATA/luscinia database
 ANALYSIS/RESULTS/spcc/contact clips
 ANALYSIS/RESULTS/spcc/models
 ANALYSIS/RESULTS/luscinia/dtw/dtw_results.RData.
