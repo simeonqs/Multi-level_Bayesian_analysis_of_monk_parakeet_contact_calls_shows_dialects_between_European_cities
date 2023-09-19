@@ -1,7 +1,7 @@
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Project: monk parakeet dialects
 # Date started: 01-09-2021
-# Date last modified: 18-02-2022
+# Date last modified: 09-02-2023
 # Author: Simeon Q. Smeele
 # Description: This script plots the final figures for the paper.
 # This version was adapted for the new results with more parks. 
@@ -9,8 +9,11 @@
 # This version used the cmdstan output. 
 # This version includes other colours. 
 # This version plots all results and moves plotting to a function. 
+# This version adds a figure with the pairwise differences between cities.
 # source('ANALYSIS/CODE/02_plot_final_figures.R')
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Set-up----
 
 # Loading libraries 
 libraries = c('rethinking', 'tidyverse')
@@ -50,7 +53,7 @@ colours = c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288",
             "#44AA99", "#882255", "#661100", "#888888")
 colours = palette.colors(n = 9, palette = "Classic Tableau")
 
-# Plot all results
+# Plot all results ----
 for(method in c('luscinia/cc', 'luscinia/dtw', 'spcc')){
   for(dim_method in c('pco', 'pca', 'umap')){
     full_path_pdf = sprintf('%s/composite figure %s - %s.pdf', 
@@ -65,7 +68,7 @@ for(method in c('luscinia/cc', 'luscinia/dtw', 'spcc')){
   }
 }
 
-# Plot results Luscinia - DTW - PCO for paper
+# Plot results Luscinia - DTW - PCO for paper ----
 {
   load(path_pco)
   pdf(path_pco_figure, 10, 10)
@@ -104,7 +107,7 @@ for(method in c('luscinia/cc', 'luscinia/dtw', 'spcc')){
   dev.off()
 }
 
-# Plot results measurements
+# Plot results measurements ----
 {
   pdf(path_measurements_figure, 5, 5)
   files = list.files(path_mes, '*RData', full.names = T)
@@ -134,7 +137,7 @@ for(method in c('luscinia/cc', 'luscinia/dtw', 'spcc')){
   dev.off()
 }
 
-# Plot composit figures for the measurements
+# Plot composit figures for the measurements ----
 load(path_mes_data)
 {
   full_path_pdf = sprintf('%s/composite figure %s - %s.pdf', 
@@ -175,7 +178,50 @@ load(path_mes_data)
   dev.off()
 }
 
-# Report
+# Figure for pairwise differences between cities ----
+load(path_pco)
+path_model_1 = sprintf('%s/%s/models/%s1 results.RData', path_results, 'luscinia/dtw', 'pco')
+path_model_2 = sprintf('%s/%s/models/%s2 results.RData', path_results,'luscinia/dtw', 'pco')
+
+colfunc = colorRampPalette(c('#0072b2', '#cc79a7', '#d55e00'))
+
+pdf('ANALYSIS/RESULTS/figures/city_comparison.pdf', 9, 9)
+par(mar = c(1, 5, 5, 1))
+plot(NULL, xlim = c(0.5, 7.5), ylim = c(1.5, 8.5), xaxt = 'n', yaxt = 'n', xlab = '', ylab = '')
+for(i in 1:7) for(j in (i+1):8) points(i, j, pch = 15, cex = 13, col = alpha('grey', 0.2))
+for(model in 1:2){
+  if(model == 1) load(path_model_1) else load(path_model_2)
+  for(i in 1:7){
+    for(j in (i+1):8){
+      cont = post[[sprintf('z_city[%s]', i)]] - post[[sprintf('z_city[%s]', j)]]
+      pi = PI(cont)
+      if(all(pi > 0) | all(pi < 0)) points(i, j, pch = 15, cex = 13, col = alpha('#2E86C1', 0.5))
+    }
+  }
+}
+for(model in 1:2){
+  if(model == 1) load(path_model_1) else load(path_model_2)
+  for(i in 1:7){
+    for(j in (i+1):8){
+      cont = post[[sprintf('z_city[%s]', i)]] - post[[sprintf('z_city[%s]', j)]]
+      pi = PI(cont)
+      pi_print = formatC(round(pi, 1), format = 'f', flag = '0', digits = 1)
+      if(all(pi > 0) | all(pi < 0)) font = 2 else font = 1
+      if(model == 1) text(i, j+0.2, sprintf('[%s,%s]', pi_print[1], pi_print[2]), font = font) else
+        text(i, j-0.2, sprintf('[%s,%s]', pi_print[1], pi_print[2]), font = font)
+    }
+  }
+}
+
+cities = base_data$cities
+unique_cities = sort(unique(cities))
+trans_cities = 1:length(unique_cities)
+names(trans_cities) = unique_cities
+axis(3, trans_cities, names(trans_cities), las = 2)
+axis(2, trans_cities, names(trans_cities), las = 2)
+dev.off()
+
+# Report ----
 write.table(sprintf('Figures are for dataset with key %s.', base_data$key), path_log,
             row.names = F, col.names = F)
 message('\nSuccesfully plotted the final figures!\n')
