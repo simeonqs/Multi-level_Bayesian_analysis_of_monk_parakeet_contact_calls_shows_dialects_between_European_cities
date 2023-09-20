@@ -4,6 +4,8 @@
 *.Rproj
 *.DS_Store
 *Icon?
+ANALYSIS/CODE/univariate model/m_4
+ANALYSIS/CODE/univariate model/m_5
 ANALYSIS/DATA/trade CITES
 ANALYSIS/DATA/18_11_traces_luscinia.csv
 ANALYSIS/DATA/all_audio
@@ -16,6 +18,12 @@ ANALYSIS/RESULTS/luscinia/dtw/umap_results.RData
 ANALYSIS/RESULTS/luscinia/dtw/dtw_results.RData
 ANALYSIS/RESULTS/luscinia/dtw/pca_results.RData
 ANALYSIS/RESULTS/luscinia/dtw/pco_results.RData
+ANALYSIS/RESULTS/luscinia/cc/models
+ANALYSIS/RESULTS/luscinia/cc/cc_results.RData
+ANALYSIS/RESULTS/luscinia/cc/umap_results.RData
+ANALYSIS/RESULTS/luscinia/cc/dtw_results.RData
+ANALYSIS/RESULTS/luscinia/cc/pca_results.RData
+ANALYSIS/RESULTS/luscinia/cc/pco_results.RData
 ANALYSIS/RESULTS/luscinia/trace measurements/model results
 ANALYSIS/RESULTS/spcc/umap_results.RData
 ANALYSIS/RESULTS/spcc/dtw_results.RData
@@ -24,6 +32,7 @@ ANALYSIS/RESULTS/spcc/pco_results.RData
 ANALYSIS/RESULTS/social networks model/sim_model.RDataANALYSIS/RESULTS/social networks model/sim_dat.RData
 ANALYSIS/RESULTS/traces on spectrogram/results.pdf
 ANALYSIS/RESULTS/sorting spectrograms
+ANALYSIS/RESULTS/univariate model/results_*
 Rproj.user
 .Rproj.user
 DOCUMENTS
