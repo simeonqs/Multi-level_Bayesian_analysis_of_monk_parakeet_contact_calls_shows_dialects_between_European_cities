@@ -1,7 +1,7 @@
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Project: chapter II
 # Date started: 05-08-2021
-# Date last modified: 20-11-2021
+# Date last modified: 09-02-2023
 # Author: Simeon Q. Smeele
 # Description: Running models on the real data.   
 # This version runs a for-loop to include both PCO1 and PCA1.
@@ -90,6 +90,10 @@ for(i in 1:6){
                      parallel_chains = 4,
                      refresh = 500,
                      adapt_delta = 0.95)
+  # WAIC(fit$output_files() |>
+  #        rstan::read_stan_csv(), pointwise=TRUE)
+  # PSIS(fit$output_files() |>
+  #        rstan::read_stan_csv(), pointwise=TRUE)
   diag = fit$cmdstan_diagnose()  
   post = fit$draws(format = "df") %>% as.data.frame
   
