@@ -1,5 +1,5 @@
 ---
-title: "Supplemental Materials"
+title: "Supplemental materials"
 output: 
   bookdown::pdf_document2:
     toc: false
@@ -25,6 +25,10 @@ Dimensionality of the resulting distance matrices was reduced to two using three
 3) uniform manifold approximation and projection (UMAP): using *umap* from the package *umap* [@umap] with the settings: input = 'dist', n_neighbors = 10, spread = 1, min_dist = 0.1
 
 For all possible combinations of similarity measures with dimension reduction we ran the same Bayesian multilevel model on the two remaining dimensions (see main text).
+
+## Distance
+
+To test the effect of distance between parks we ran a Bayesian model similar to the model in the main text, but within each city. We used a multi-normal distribution where the variance-covariance was computed from the distance matrix using the L2-norm.
 
 # Results
 
@@ -106,12 +110,38 @@ knitr::include_graphics('../../RESULTS/figures/sigmas spcc - pco.pdf')
 knitr::include_graphics('../../RESULTS/figures/sigmas spcc - umap.pdf')
 ```
 
-\newpage
-
-Figure 19 shows the trade history for the four countries for which we have recordings. 
-
-```{r trade, fig.cap="Trade in monk parakeets through time recorded by CITES.", echo=FALSE}
-knitr::include_graphics('../../RESULTS/CITES trade/trade graphs.pdf')
+```{r, fig.cap="Covariance between parks in Athens as function of normalised distance.", echo=FALSE}
+knitr::include_graphics('../../RESULTS/figures/distance/distance result - Athens.pdf')
 ```
+
+```{r, fig.cap="Covariance between parks in Madrid as function of normalised distance..", echo=FALSE}
+knitr::include_graphics('../../RESULTS/figures/distance/distance result - Madrid.pdf')
+```
+
+```{r, fig.cap="Covariance between parks in Barcelona as function of normalised distance.", echo=FALSE}
+knitr::include_graphics('../../RESULTS/figures/distance/distance result - Barcelona.pdf')
+```
+
+```{r, fig.cap="Map of all parks sampled in Athens.", echo=FALSE}
+knitr::include_graphics('../../RESULTS/maps/parks_map_athens.pdf')
+```
+
+```{r, fig.cap="Map of all parks sampled in Barcelona", echo=FALSE}
+knitr::include_graphics('../../RESULTS/maps/parks_map_barcelona.pdf')
+```
+
+```{r, fig.cap="Map of all parks sampled in Brussels", echo=FALSE}
+knitr::include_graphics('../../RESULTS/maps/parks_map_brussels.pdf')
+```
+
+```{r, fig.cap="Map of all parks sampled in Italy", echo=FALSE}
+knitr::include_graphics('../../RESULTS/maps/parks_map_italy.pdf')
+```
+
+```{r, fig.cap="Map of all parks sampled in Madrid", echo=FALSE}
+knitr::include_graphics('../../RESULTS/maps/parks_map_madrid.pdf')
+```
+
+\newpage
 
 # References
