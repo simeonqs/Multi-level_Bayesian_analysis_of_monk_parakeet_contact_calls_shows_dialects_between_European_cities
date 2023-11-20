@@ -90,10 +90,8 @@ All other packages will be automatically installed when running the R scripts.
 	
 - ANALYSIS/CODE
 	- the folder with all scripts needed to reproduce the results, note that each script has a description in the header, for details see also "Reproducing results" in the README, see below for the files not explicitly described in that section
-	
 - ANALYSIS/CODE/functions
 	- the folder with all home-made functions needed, these are automatically loaded by the scripts that require them
-	
 - ANALYSIS/CODE/markdowns/bibliography.bib
 	- the bib files that contains all references for the markdowns
 - ANALYSIS/CODE/markdowns/sensitivity analysis.Rmd
@@ -104,7 +102,6 @@ All other packages will be automatically installed when running the R scripts.
 	- the markdown file needed to reproduced the supplemental results, description of steps within
 - ANALYSIS/CODE/markdowns/supplemental-results.pdf
 	- the pdf with the compiled supplemental results
-	
 - ANALYSIS/CODE/univariate model/00_simulate_clean.R
 	- R script to simulate dialect data for sensitivity analysis
 - ANALYSIS/CODE/univariate model/01_simulate_noisy.R
@@ -186,17 +183,23 @@ All other packages will be automatically installed when running the R scripts.
 - ANALYSIS/DATA/Bad_Files_version_old_before_adjusted.xlsx
 	- excel file with some names of poor traces that were also removed from the Luscinia database (only used to make sure we were not forgetting some traces
 	- meta data not relevant
-	
-- ANALYSIS/RESULTS/figures/compositeXXX
+
+- ANALYSIS/RESULTS/figures/distance/*
+  	- pdfs with the output of the distance models for the three cities with enough parks
+- ANALYSIS/RESULTS/figures/city_comparison.pdf
+  	- pdf for figure 3 in the main text
+- ANALYSIS/RESULTS/figures/composite*
 	- pdfs for all composite figures for the combination of a method and a dimension reduction analysed with the Bayesian multilevel model
 - ANALYSIS/RESULTS/figures/fig_pco_paper.pdf
-	- pdf for the main composite figure
+	- pdf for figure 4 in the main text
+- ANALYSIS/RESULTS/figures/figures_log.txt
+	- txt file with log to keep track of which base data was used to generate the figures
 - ANALYSIS/RESULTS/figures/sensitivity analysis figure.pdf
 	- pdf for the simulated data, can be compared to the composite figures to see how incorrect pooling can create spurious results
 - ANALYSIS/RESULTS/figures/sigmasXXX
 	- pdfs for the sigma parameters, can be compared to the sensitivity analysis
-- ANALYSIS/RESULTS/figures/figures_log.txt
-	- txt file with log to keep track of which base data was used to generate the figures
+ ANALYSIS/RESULTS/figures/variant_plot.pdf
+	- pdf for figure 5 in the main text
 
 ------------------------------------------------
 
