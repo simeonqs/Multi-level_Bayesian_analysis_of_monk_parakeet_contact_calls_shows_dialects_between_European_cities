@@ -198,8 +198,39 @@ All other packages will be automatically installed when running the R scripts.
 	- pdf for the simulated data, can be compared to the composite figures to see how incorrect pooling can create spurious results
 - ANALYSIS/RESULTS/figures/sigmasXXX
 	- pdfs for the sigma parameters, can be compared to the sensitivity analysis
- ANALYSIS/RESULTS/figures/variant_plot.pdf
+- ANALYSIS/RESULTS/figures/variant_plot.pdf
 	- pdf for figure 5 in the main text
+- ANALYSIS/RESULTS/luscinia/missing_files.csv
+  	- empty csv, contained files that were not yet analysed in Luscinia
+- ANALYSIS/RESULTS/luscinia/missing_files_log.txt
+  	- log file to keep track on which base data was used to generate missing_files.csv
+- ANALYSIS/RESULTS/luscinia/traces.RData
+  	- data object containing all the traces from Luscinia
+  	- named list, names are file_selection, objects in list are numeric vectors of variable length
+- ANALYSIS/RESULTS/luscinia/traces_log.txt
+  	- log file to keep track on which base data was used to generate traces.RData
+- ANALYSIS/RESULTS/luscinia/cc/PCA cities.pdf
+  	- pdf for the results of cross correlation combined with PCA
+- ANALYSIS/RESULTS/luscinia/cc/PCO cities.pdf
+  	- pdf for the results of cross correlation combined with PCO
+- ANALYSIS/RESULTS/luscinia/cc/UMAP cities.pdf
+  	- pdf for the results of cross correlation combined with UMAP
+- ANALYSIS/RESULTS/luscinia/cc/cc_results.txt
+  	- log file to keep track on which base data was used to generate the cross correlation results
+- ANALYSIS/RESULTS/luscinia/dtw/PCA cities.pdf
+  	- pdf for the results of dynamic time warping combined with PCA
+- ANALYSIS/RESULTS/luscinia/dtw/PCO cities.pdf
+  	- pdf for the results of dynamic time warping combined with PCO
+- ANALYSIS/RESULTS/luscinia/dtw/UMAP cities.pdf
+  	- pdf for the results of dynamic time warping combined with UMAP
+- ANALYSIS/RESULTS/luscinia/dtw/dtw_results_log.txt
+  	- log file to keep track on which base data was used to generate the dynamic time warping results
+- ANALYSIS/RESULTS/luscinia/trace measurements/*
+  	- not used
+- ANALYSIS/RESULTS/
+- ANALYSIS/RESULTS/
+- ANALYSIS/RESULTS/
+- ANALYSIS/RESULTS/
 
 ------------------------------------------------
 
