@@ -227,9 +227,14 @@ All other packages will be automatically installed when running the R scripts.
   	- log file to keep track on which base data was used to generate the dynamic time warping results
 - ANALYSIS/RESULTS/luscinia/trace measurements/*
   	- not used
-- ANALYSIS/RESULTS/
-- ANALYSIS/RESULTS/
-- ANALYSIS/RESULTS/
+- ANALYSIS/RESULTS/maps/*
+  	- eps files with maps of Europe and individuals cities
+- ANALYSIS/RESULTS/quality control/all good.csv
+  	- csv file with single column (no header) containing the file names for good quality calls
+  	- naming is "filename_raw_data.wav-selection", e.g., "2019_11_04_083724.wav-18"
+- ANALYSIS/RESULTS/sorting spectrograms/irr_observer_results.csv
+  	- 
+- ANALYSIS/RESULTS/sorting spectrograms/
 - ANALYSIS/RESULTS/
 
 ------------------------------------------------
