@@ -233,9 +233,9 @@ All other packages will be automatically installed when running the R scripts.
   	- csv file with single column (no header) containing the file names for good quality calls
   	- naming is "filename_raw_data.wav-selection", e.g., "2019_11_04_083724.wav-18"
 - ANALYSIS/RESULTS/sorting spectrograms/irr_observer_results.csv
-  	- 
-- ANALYSIS/RESULTS/sorting spectrograms/
-- ANALYSIS/RESULTS/
+  	- csv file with three columns (index_match, call_type,bin_choice) containing the results of additional observer for categorizing contact calls vs non contact calls (to be directly compared to master_observer_results.csv) 
+- ANALYSIS/RESULTS/sorting spectrograms/master_observer_results.csv
+	- csv file with three columns (index_match, call_type,bin_choice) containing the results of authors for categorizing contact calls vs non contact calls (to be compared to irr_observer_results.csv)
 
 ------------------------------------------------
 
