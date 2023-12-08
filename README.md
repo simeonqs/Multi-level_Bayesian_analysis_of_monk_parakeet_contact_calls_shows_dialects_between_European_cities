@@ -83,6 +83,8 @@ All other packages will be automatically installed when running the R scripts.
 
 # Meta data
 
+Large data files are not stored on GitHub. You can download everything here: <https://doi.org/10.17617/3.CNXVJ7>.
+
 - .gitignore
 	- the invisible file telling git which files should not be synced (large or useless files)
 - README
