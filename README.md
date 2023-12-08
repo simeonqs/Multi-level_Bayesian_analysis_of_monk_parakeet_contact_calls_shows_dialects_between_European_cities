@@ -3,7 +3,7 @@
 This repo is associated with the following article: 
 
 ```
-Smeele, S. Q.*, Tyndel, S. A.*, Aplin, L. A. & McElreath, M. B. (2022). Multi-level analysis of monk parakeet vocalisations shows emergent dialects between cities in the European invasive range. BioRxiv. https://doi.org/10.1101/2022.10.12.511863 [* co-first author]
+Simeon Q Smeele, Stephen A Tyndel, Lucy M Aplin, Mary Brooke McElreath, Multilevel Bayesian analysis of monk parakeet contact calls shows dialects between European cities, Behavioral Ecology, 2023;, arad093, https://doi.org/10.1093/beheco/arad093
 ```
 ------------------------------------------------
 
